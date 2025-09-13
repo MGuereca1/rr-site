@@ -1,13 +1,19 @@
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import dune from '../assets/gallery/dune.avif'
-import image1 from '../assets/gallery/image-1.jpg'
-import image2 from '../assets/gallery/image-2.jpg'
-import image3 from '../assets/gallery/image-3.jpg'
-import image4 from '../assets/gallery/image-4.jpg'
+
+import image1 from '../assets/gallery/remodeling/FYJI1211.JPG'
+import image2 from '../assets/gallery/other/UVTE7010.JPG'
+import image3 from '../assets/gallery/carpentry/GATJ5337.JPG'
+import image4 from '../assets/gallery/demolition/YCMA8915.JPG'
+import image5 from '../assets/gallery/siding/SJKA7466.JPG'
+import image6 from '../assets/gallery/other/RZSJ3378.JPG'
+import image7 from '../assets/gallery/remodeling/XQID1111.JPG'
+
+
+// chose best pcitures from gallery to showcase below
 
 const Gallery_prev = () => {
-  const images = [dune, image1, image2, image3, image4];
+  const images = [image1, image2, image3, image4, image5, image6, image7];
   const [current, setCurrent] = useState(0);
 
   const prevSlide = () => {

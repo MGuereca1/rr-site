@@ -1,4 +1,5 @@
 import placeholder from '../assets/placeholder.jpg'
+import hero from '../assets/gallery/siding/MINV6800.JPG'
 
 const Hero = () => {
   return (
@@ -7,7 +8,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           className="w-full h-full object-cover"
-          src={placeholder}
+          src={hero}
           alt="Premium construction and remodeling work"
         />
         {/* Professional overlay */}

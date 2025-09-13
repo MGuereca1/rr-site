@@ -1,6 +1,30 @@
-import React from 'react'
+import { useRef } from "react"
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+  // emailjs template
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID, 
+        import.meta.env.VITE_TEMPLATE_ID, 
+        form.current, { publicKey: import.meta.env.VITE_PUBLIC_KEY,
+      })
+
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
     <div>
       <section id="contact" className="bg-neutral-900 text-white py-16 border-t border-neutral-700/80">
@@ -17,7 +41,7 @@ const Contact = () => {
           </div>
 
           {/* Form */}
-          <form className="space-y-6">
+          <form ref={form} onSubmit={sendEmail} className="space-y-6">
             {/* Full Name */}
             <div className="flex flex-col">
               <label className="mb-2 font-medium">Full Name</label>

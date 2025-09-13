@@ -5,45 +5,62 @@ export const navItems = [
     { label: 'Services', href: '/services' },
     { label: 'About', href: '/about' },
     { label: 'Gallery', href: '/gallery' },
+    { label: 'Contact us', href: '/contact' },
 ]
+
+import carpentry from '../assets/service_img/carpentry.jpg'
+import remodeling from '../assets/service_img/remodeling.jpg'
+import demolition from '../assets/service_img/demolition.jpg'
+import siding from '../assets/service_img/siding.jpg'
+import more from '../assets/service_img/more.jpg'
 
 export const services = [
     {
       title: "Remodeling",
       description: "Complete home and commercial remodeling services designed to transform your space with quality craftsmanship and attention to detail.",
-      image: "", // Add your image path here
+      image: remodeling,
       alt: "remodeling example"
     },
     {
       title: "Carpentry",
       description: "Expert carpentry tailored to your needs — from custom builds to structural work. Carpentry is our specialty and most requested service.",
-      image: "", 
+      image: carpentry, 
       alt: "carpentry example"
     },
     {
       title: "Demolition",
       description: "Safe, efficient demolition services to prepare your property for new builds, renovations, or upgrades.",
-      image: "",
+      image: demolition,
       alt: "demolition example"
     },
     {
-      title: "Siding Packages",
+      title: "Siding",
       description: "Durable and attractive siding solutions to enhance curb appeal while protecting your property from the elements.",
-      image: "",
+      image: siding,
       alt: "siding example"
+    },
+    {
+      title: "Other",
+      description: "Need anything else done? Contact us to work out the job you want!",
+      image: more,
+      alt: "other"
     }
 ]
+
+import Logo from '../assets/logo.JPG'
+import values from '../assets/gallery/siding/SKHC7343.JPG'
+
 
 export const about = [
     {
       title: "Our Story",
       description: "Founded on a passion for building, R&R Construction Solutions LLC has grown from a family tradition into a professional construction business. With over 15 years of hands-on experience in carpentry and remodeling, our journey began with a love for the trade and a commitment to quality craftsmanship.",
-      img: ""
+      img: Logo
     },
     {
       title: "Our Values",
       description: "We believe in honesty, hard work, and integrity. Our small but dedicated team of professionals is committed to fast, efficient, and reliable service. Every project we take on reflects our motto: 'Quality first — professional, trustworthy, and built for a stronger future.'",
-      img: ""
+      img: values
     },
     {
       title: "Our founder",
@@ -68,15 +85,15 @@ export const ServicesLink = [
 
 export const contactInfo = {
     email: {
-        address: 'rrconstruction.solutions1@gmail.com', // replace with actual email
-        href: 'mailto:example@gmail.com'
+        address: 'rrconstruction.solutions1@gmail.com',
+        href: 'mailto:rrconstruction.solutions1@gmail.com'
     },
     phone: {
         display: '678-629-0102',
         href: 'tel:6786290102'
     },
     address: {
-        full: '123 Main Street\nAtlanta, GA 30309'
+        full: '1846 Alcovy Trace way \nLawrenceville, GA 30045'
     }
 }
 
@@ -86,7 +103,7 @@ export const social = {
     },
     social1: {
         label: 'Facebook',
-        href: '#'
+        href: 'https://www.facebook.com/share/1HALE6gfAh/?mibextid=wwXIfr'
     },
     social2: {
         label: 'Instagram',
@@ -94,46 +111,3 @@ export const social = {
     }
 }
 
-import dune from '../assets/gallery/dune.avif'
-import image1 from '../assets/gallery/image-1.jpg'
-import image2 from '../assets/gallery/image-2.jpg'
-import image3 from '../assets/gallery/image-3.jpg'
-import image4 from '../assets/gallery/image-4.jpg'
-
-export const galleryImages = [
-    {
-      id: 1,
-      src: dune,  // Changed from 'imgage' to 'src'
-      alt: 'Kitchen remodel project',
-      service: 'Remodeling',
-      title: 'Modern Kitchen Renovation'
-    },
-    {
-      id: 2,
-      src: image1,  
-      alt: 'Custom cabinet work',
-      service: 'Carpentry',
-      title: 'Custom Built-in Cabinets'
-    },
-    {
-      id: 3,
-      src: image2, 
-      alt: 'Demolition work in progress',
-      service: 'Demolition',
-      title: 'Bathroom Demolition'
-    },
-    {
-      id: 4,
-      src: image3, 
-      alt: 'New siding installation',
-      service: 'Siding Packages',
-      title: 'Vinyl Siding Installation'
-    },
-    {
-      id: 5,
-      src: image4, 
-      alt: 'Bathroom remodel',
-      service: 'Remodeling',
-      title: 'Complete Bathroom Renovation'
-    }
-]

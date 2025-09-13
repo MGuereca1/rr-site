@@ -7,7 +7,7 @@ import Gallery_prev from './Gallery_prev'
 
 
 const Home = () => {
-    // call st
+
   return (
     <div>
         <Hero />

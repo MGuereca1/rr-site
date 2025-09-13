@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {Menu, X} from 'lucide-react'
 import { navItems } from '../constants'
-import plogo from '../assets/plogo.png'
+import Logo from '../assets/logo.png'
 import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
@@ -19,8 +19,10 @@ const Navbar = () => {
           <div className="hidden lg:block flex-1"></div>
           
           {/* Centered logo and company name */}
-          <div className="flex items-center flex-shrink-0">
-            <img className="h-10 w-10 mr-2" src={plogo} alt="logo" />
+          <div className="flex items-center justify-center">
+            <div className="h-28 w-28 rounded-full overflow-hidden">
+              <img className="w-full h-full object-cover transform scale-200" src={Logo} alt="logo" />
+            </div>
             <span className="text-xl tracking-tight">
               RR Construction Solutions LLC.
             </span>
@@ -38,18 +40,18 @@ const Navbar = () => {
         </div>
         
         {/* Navigation items - centered below logo */}
-        <ul className="hidden lg:flex justify-center space-x-10 mt-4">
-          {navItems.map((item, index) =>(
+        <ul className="hidden lg:flex justify-center space-x-10 items-center mt-4">
+          {navItems.map((item, index) => (
             <li key={index}>
-                {item.href.startsWith('#') ? (
-                  <a href={item.href}>{item.label}</a>
-                ) : (
-                  <NavLink to={item.href}>{item.label}</NavLink>
-                )}
-              </li>
+              {item.href.startsWith('#') ? (
+                <a href={item.href}>{item.label}</a>
+              ) : (
+                <NavLink to={item.href}>{item.label}</NavLink>
+              )}
+            </li>
           ))}
-          <button className='text-white hover:rounded-md hover:bg-yellow-500 hover:text-black cursor-pointer px-3 py-1 transition-all duration-200' onClick={() => window.location.href = '#contact'}>Contact Us</button>
         </ul>
+
         
         {mobileDrawerOpen && (
         <div className="absolute top-full right-0 z-20 bg-neutral-900 w-80 p-6 flex flex-col justify-start items-start lg:hidden shadow-lg rounded-bl-lg">
