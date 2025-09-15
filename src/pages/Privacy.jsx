@@ -61,7 +61,7 @@ const Privacy = () => {
           <div>
             <h2 className="text-xl font-semibold mb-3">5. Your Rights</h2>
             <p>
-              Depending on your location, you may have the right to request access, correction, or deletion of your personal data. To exercise these rights, please contact us at [your email address].
+              Depending on your location, you may have the right to request access, correction, or deletion of your personal data. To exercise these rights, please contact us at rrconstruction.solutions1@gmail.com.
             </p>
           </div>
 

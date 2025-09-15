@@ -28,9 +28,9 @@ const Terms = () => {
           </div>
 
           <div>
-            <h2 className="text-xl font-semibold mb-2">2. No Guarantees</h2>
+            <h2 className="text-xl font-semibold mb-2">2. Availability Disclaimer</h2>
             <p>
-              We make no guarantees that our website or contact form will always be available, error-free, or secure.
+              While we do our best to keep this website and contact form running smoothly, we cannot guarantee that it will always be available, error-free, or completely secure.
             </p>
           </div>
 
