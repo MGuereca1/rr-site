@@ -1,102 +1,108 @@
 // for content that needs to be constant
 
 export const navItems = [
-    { label: 'Home', href:'/'},
-    { label: 'Services', href:'/services'},
-    { label: 'About', href:'/about'},
-    { label: 'Gallery', href:'/gallery'},
-    { label: 'Contact', href:'#contact'}, // Fixed: Added missing forward slash
+    { label: 'Home', href: '/' },
+    { label: 'Services', href: '/services' },
+    { label: 'About', href: '/about' },
+    { label: 'Gallery', href: '/gallery' },
+    { label: 'Contact us', href: '/contact' },
 ]
+
+import carpentry from '../assets/service_img/carpentry.jpg'
+import remodeling from '../assets/service_img/remodeling.jpg'
+import demolition from '../assets/service_img/demolition.jpg'
+import siding from '../assets/service_img/siding.jpg'
+import more from '../assets/service_img/more.jpg'
 
 export const services = [
     {
-      title: "Frames",
-      description: "Professional framing services for residential and commercial projects",
-      image: "", // Add your image path here
-      alt: "frame example"
+      title: "Remodeling",
+      description: "Complete home and commercial remodeling services designed to transform your space with quality craftsmanship and attention to detail.",
+      image: remodeling,
+      alt: "remodeling example"
     },
     {
-      title: "Decks", 
-      description: "Custom deck construction and renovation services",
-      image: "", // Add your image path here
-      alt: "deck example"
+      title: "Carpentry",
+      description: "Expert carpentry tailored to your needs — from custom builds to structural work. Carpentry is our specialty and most requested service.",
+      image: carpentry, 
+      alt: "carpentry example"
     },
     {
-      title: "Finishing",
-      description: "Interior and exterior finishing work with attention to detail",
-      image: "", // Add your image path here
-      alt: "finishing example"
+      title: "Demolition",
+      description: "Safe, efficient demolition services to prepare your property for new builds, renovations, or upgrades.",
+      image: demolition,
+      alt: "demolition example"
     },
     {
-      title: "Commercial Builds",
-      description: "Large-scale commercial construction projects",
-      image: "", // Add your image path here
-      alt: "commercial build example"
+      title: "Siding",
+      description: "Durable and attractive siding solutions to enhance curb appeal while protecting your property from the elements.",
+      image: siding,
+      alt: "siding example"
+    },
+    {
+      title: "Other",
+      description: "Need anything else done? Contact us to work out the job you want!",
+      image: more,
+      alt: "other"
     }
-  ]
+]
+
+import Logo from '../assets/logo.JPG'
+import values from '../assets/gallery/siding/SKHC7343.JPG'
+
 
 export const about = [
     {
-      title:'Our Story',
-      description:'Founded in 2020 something....say stuff about experience',
-      img:''
+      title: "Our Story",
+      description: "Founded on a passion for building, R&R Construction Solutions LLC has grown from a family tradition into a professional construction business. With over 15 years of hands-on experience in carpentry and remodeling, our journey began with a love for the trade and a commitment to quality craftsmanship.",
+      img: Logo
     },
     {
-      title:'Here to help you',
-      description:'values and approaches, pricing.....',
-      img:''
-    },
-    {
-      title:'Our Team',
-      description:'Meet our team....',
-      img:''
+      title: "Our Values",
+      description: "We believe in honesty, hard work, and integrity. Our small but dedicated team of professionals is committed to fast, efficient, and reliable service. Every project we take on reflects our motto: 'Quality first — professional, trustworthy, and built for a stronger future.'",
+      img: values
     }
-  ]
-
-export const SocialLinks = [
-    { href: '#', label: 'Facebook' },
-    { href: '#', label: 'Instagram' },
 ]
 
 export const QuickLink = [
-    { href:'/', text: 'Home' },
+    { href: '/', text: 'Home' },
     { href: '/about', text: 'About' },
     { href: '/services', text: 'Services' },
     { href: '/contact', text: 'Contact' }
 ]
 
 export const ServicesLink = [
+    { href: '/services', text: 'Remodeling' },
     { href: '/services', text: 'Carpentry' },
-    { href: '/services', text: 'Home Development' },
-    { href: '/services', text: 'Finishing' },
-    { href: '/services', text: 'other services'}
+    { href: '/services', text: 'Demolition' },
+    { href: '/services', text: 'Siding Packages' }
 ]
 
 export const contactInfo = {
     email: {
-        address: 'example@gmail.com',
-        href: 'mailto:example@gmail.com'
+        address: 'rrconstruction.solutions1@gmail.com',
+        href: 'mailto:rrconstruction.solutions1@gmail.com'
     },
     phone: {
-        display: '+1 (234) 567-890',
-        href: 'tel:+1234567890'
+        display: '678-629-0102',
+        href: 'tel:6786290102'
     },
     address: {
-        full: '123 Main Street\nAtlanta, GA 30309'
+        full: '1846 Alcovy Trace way \nLawrenceville, GA 30045'
     }
 }
 
 export const social = {
-    // change message here
-    message:{
-        text:'Building amazing experiences and delivering quality services to our valued customers since 2020.'
+    message: {
+        text: 'Quality first — delivering professional, trustworthy builds for a stronger future since day one.'
     },
     social1: {
         label: 'Facebook',
-        //TODO: href: '#' place facebook link here 
+        href: 'https://www.facebook.com/share/1HALE6gfAh/?mibextid=wwXIfr'
     },
     social2: {
         label: 'Instagram',
-        //TODO: href: '#' place INSTAGRAM link here 
+        href: 'https://www.instagram.com/constructionsatl?igsh=MTB2bm8wa3NlbGxpOQ=='
     }
 }
+

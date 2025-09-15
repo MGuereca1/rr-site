@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {Menu, X} from 'lucide-react'
 import { navItems } from '../constants'
-import plogo from '../assets/plogo.png'
+import Logo from '../assets/logo.png'
 import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
@@ -14,49 +14,74 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
       <div className="container px-4 mx-auto relative text-sm">
-        <div className="relative flex items-center justify-between">
-          <div className="flex items-center flex-shrink-0">
-            <img className="h-10 w-10 mr-2" src={plogo} alt="logo" />
+        <div className="relative flex items-center justify-center lg:justify-between">
+          {/* Empty div for desktop spacing - keeps logo centered on mobile */}
+          <div className="hidden lg:block flex-1"></div>
+          
+          {/* Centered logo and company name */}
+          <div className="flex items-center justify-center">
+            <div className="h-28 w-28 rounded-full overflow-hidden">
+              <img className="w-full h-full object-cover transform scale-200" src={Logo} alt="logo" />
+            </div>
             <span className="text-xl tracking-tight">
               RR Construction Solutions LLC.
             </span>
           </div>
+          
+          {/* Mobile menu button - positioned absolutely on mobile, normally on desktop */}
+          <div className="lg:hidden absolute right-0">
+            <button onClick={toggleNavbar}>
+                {mobileDrawerOpen ? <X /> : <Menu/>}
+            </button>
+          </div>
+          
+          {/* Empty div for desktop spacing - keeps logo centered */}
+          <div className="hidden lg:block flex-1"></div>
         </div>
         
-        {/* the hiddden below makes it so the Navitems only show up in bigger screens */}
-        <ul className="hidden lg:flex justify-center space-x-10 mt-2 ">
-          {navItems.map((item, index) =>(
+        {/* Navigation items - centered below logo */}
+        <ul className="hidden lg:flex justify-center space-x-10 items-center mt-4">
+          {navItems.map((item, index) => (
             <li key={index}>
-                {item.href.startsWith('#') ? (
-                  <a href={item.href}>{item.label}</a>
-                ) : (
-                  <NavLink to={item.href}>{item.label}</NavLink>
-                )}
-              </li>
+              {item.href.startsWith('#') ? (
+                <a href={item.href}>{item.label}</a>
+              ) : (
+                <NavLink to={item.href}>{item.label}</NavLink>
+              )}
+            </li>
           ))}
         </ul>
-        
-        <div className="lg:hidden md:flex flex-col justify-end">
-          <button onClick={toggleNavbar}>
-              {mobileDrawerOpen ? <X /> : <Menu/>}
-          </button>
-        </div>
+
         
         {mobileDrawerOpen && (
-        <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
-            <ul>
+        <div className="absolute top-full right-0 z-20 bg-neutral-900 w-80 p-6 flex flex-col justify-start items-start lg:hidden shadow-lg rounded-bl-lg">
+            <ul className="w-full">
               {navItems.map((item, index) => (
-                <li key={index} className="py-4">
-                  <a href={item.href}>{item.label}</a>
+                <li key={index} className="py-3 border-b border-neutral-700 last:border-b-0">
+                  {item.href.startsWith('#') ? (
+                    <a href={item.href} className="block hover:text-neutral-300 transition-colors">
+                      {item.label}
+                    </a>
+                  ) : (
+                    <NavLink to={item.href} className="block hover:text-neutral-300 transition-colors">
+                      {item.label}
+                    </NavLink>
+                  )}
                 </li>
               ))}
+              <li className="pt-4">
+                <button 
+                  onClick={() => window.location.href = '#contact'} 
+                  className="w-full text-left hover:text-neutral-300 transition-colors"
+                >
+                  Contact us
+                </button>
+              </li>
             </ul>
         </div>
-    )}
+        )}
 
       </div>
-
-
     </nav>
   )
 }

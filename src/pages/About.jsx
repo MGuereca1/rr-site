@@ -14,31 +14,30 @@ const About = () => {
     {/* Loop through about items */}
     <div className="space-y-16">
       {about.map((item, index) => (
-        <div
-          key={index}
-          className={`grid md:grid-cols-2 gap-10 items-center ${
-            index % 2 === 1 ? "md:flex-row-reverse" : ""
-          }`}
-        >
-          {/* Text Content */}
-          <div>
-            <h3 className="text-2xl font-semibold text-yellow-400 mb-4">
-              {item.title}
-            </h3>
-            <p className="text-neutral-300 leading-relaxed">
-              {item.description}
-            </p>
-          </div>
+      
+      <div key={index} className={`flex flex-col md:flex-row gap-10 items-center justify-center ${
+      index % 2 === 1 ? "md:flex-row-reverse" : ""
+    }`}
+    >
+      {/* Text Content */}
+      <div className="flex-1 text-center md:text-left max-w-md">
+        <h3 className="text-2xl font-semibold text-yellow-400 mb-4">
+          {item.title}
+        </h3>
+        <p className="text-neutral-300 leading-relaxed">
+          {item.description}
+        </p>
+      </div>
 
-          {/* Image */}
-          <div className="rounded-2xl overflow-hidden shadow-md border border-neutral-700/60">
-            <img
-              src={item.img || "/api/placeholder/500/300"}
-              alt={item.title}
-              className="w-full h-64 md:h-80 object-cover"
-            />
-          </div>
-        </div>
+      {/* Image */}
+      <div className="rounded-2xl overflow-hidden shadow-md border border-neutral-700/60 w-80 h-80 flex-shrink-0">
+        <img
+          src={item.img}
+          alt={item.title}
+          className="w-full h-full object-cover"
+        />
+      </div>
+  </div>
       ))}
     </div>
   </div>
