@@ -61,12 +61,7 @@ export const about = [
       title: "Our Values",
       description: "We believe in honesty, hard work, and integrity. Our small but dedicated team of professionals is committed to fast, efficient, and reliable service. Every project we take on reflects our motto: 'Quality first — professional, trustworthy, and built for a stronger future.'",
       img: values
-    },
-    {
-      title: "Our founder",
-      description: "Luis Guereca founded the company in 2021 after over a decade of experience in the construction industry. Driven by a commitment to quality and integrity, Luis believes every project should stand the test of time creating not just strong builds, but stronger futures for the people who live and work in them.",
-      img: ""
-    },
+    }
 ]
 
 export const QuickLink = [
