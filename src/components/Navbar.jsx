@@ -58,25 +58,16 @@ const Navbar = () => {
             <ul className="w-full">
               {navItems.map((item, index) => (
                 <li key={index} className="py-3 border-b border-neutral-700 last:border-b-0">
-                  {item.href.startsWith('#') ? (
-                    <a href={item.href} className="block hover:text-neutral-300 transition-colors">
-                      {item.label}
-                    </a>
-                  ) : (
-                    <NavLink to={item.href} className="block hover:text-neutral-300 transition-colors">
+                    <NavLink 
+                      to={item.href}
+                      className="block hover:text-neutral-300 transition-colors"
+                      // so the mobile drawer closes after link is clicked
+                      onClick={() => setMobileDrawerOpen(false)}
+                      > 
                       {item.label}
                     </NavLink>
-                  )}
                 </li>
               ))}
-              <li className="pt-4">
-                <button 
-                  onClick={() => window.location.href = '#contact'} 
-                  className="w-full text-left hover:text-neutral-300 transition-colors"
-                >
-                  Contact us
-                </button>
-              </li>
             </ul>
         </div>
         )}

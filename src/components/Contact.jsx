@@ -1,5 +1,6 @@
 import { useRef } from "react"
 import emailjs from '@emailjs/browser'
+import Swal from "sweetalert2"
 
 const Contact = () => {
   // emailjs template
@@ -17,9 +18,19 @@ const Contact = () => {
 
       .then(
         () => {
+          Swal.fire({
+                title: "Success!",
+                text: "Message sent successfully!",
+                icon: "success"
+            })
           console.log('SUCCESS!');
         },
         (error) => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!"
+          })
           console.log('FAILED...', error.text);
         },
       );
@@ -94,7 +105,7 @@ const Contact = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="px-6 py-3 rounded-lg bg-yellow-400 text-neutral-900 font-semibold shadow-md hover:bg-yellow-300 transition"
+                className="px-6 py-3 rounded-lg bg-yellow-400 text-neutral-900 font-semibold shadow-md hover:bg-yellow-300 transition cursor-pointer"
               >
                 Send Message
               </button>
